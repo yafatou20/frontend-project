@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Social App</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: #cce0ff;
+    }
+    header {
+      background-color: #3366cc;
+      padding: 1rem 2rem;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    header h1 {
+      font-size: 1.5rem;
+    }
+    nav a {
+      color: white;
+      margin-left: 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .feed {
+      max-width: 700px;
+      margin: 2rem auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .post {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      height: 450px;
+    }
+    .post-header {
+      display: flex;
+      align-items: center;
+      padding: 1rem;
+    }
+    .post-header img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-right: 1rem;
+    }
+    .post img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+    .post-content {
+      padding: 1rem;
+      flex: 1;
+    }
+    .post-content p {
+      margin-bottom: 0.5rem;
+    }
+    .post-actions {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+    }
+    footer {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>MySocial</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Profile</a>
+      <a href="#">Messages</a>
+      <a href="#">Logout</a>
+    </nav>
+  </header>
+  <main class="feed">
+    <div class="post">
+      <div class="post-header">
+        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User">
+        <strong>Fatoumata</strong>
+      </div>
+      <img src="https://images.unsplash.com/photo-1558981033-3ea75c8b93f7?auto=format&fit=crop&w=800&q=60" alt="Post image">
+      <div class="post-content">
+        <p>This is my first post! 🌟</p>
+      </div>
+      <div class="post-actions">
+        <span>❤️ Like</span>
+        <span>💬 Comment</span>
+        <span>🔁 Share</span>
+      </div>
+    </div>
+    <div class="post">
+      <div class="post-header">
+        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="User">
+        <strong>Zahra</strong>
+      </div>
+      <img src="https://images.unsplash.com/photo-1543353071-873f17a7a088?auto=format&fit=crop&w=800&q=60" alt="Post image">
+      <div class="post-content">
+        <p>Enjoying this new app!</p>
+      </div>
+      <div class="post-actions">
+        <span>❤️ Like</span>
+        <span>💬 Comment</span>
+        <span>🔁 Share</span>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2025 MySocial App by Fatoumata</p>
+  </footer>
+
+  <script>
+    // Future interactive features go here
+    console.log("Social media app loaded");
+  </script>
+</body>
+</html>

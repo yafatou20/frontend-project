@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zahra's Blog</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    :root {
+      --pale-pink: #ffe4e6;
+      --salmon: #fa8072;
+      --dark: #1e1e1e;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--pale-pink);
+      color: var(--dark);
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background: white;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 999;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: var(--salmon);
+    }
+
+    nav a {
+      margin-left: 1.5rem;
+      text-decoration: none;
+      color: var(--dark);
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--salmon);
+    }
+
+    .hero {
+      margin-top: 100px;
+      padding: 4rem 2rem;
+      text-align: center;
+      background: linear-gradient(135deg, var(--pale-pink), white);
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+    }
+
+    .slider {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: 1rem;
+      padding: 2rem;
+    }
+
+    .slider::-webkit-scrollbar {
+      display: none;
+    }
+
+    .slide {
+      scroll-snap-align: center;
+      min-width: 300px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+
+    .slide:hover {
+      transform: scale(1.03);
+    }
+
+    .slide img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .slide-content {
+      padding: 1rem;
+    }
+
+    .slide-content h3 {
+      margin-bottom: 0.5rem;
+      color: var(--salmon);
+    }
+
+    .chatbox {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 300px;
+      max-height: 400px;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .chat-header {
+      background: var(--salmon);
+      color: white;
+      padding: 1rem;
+      font-weight: bold;
+    }
+
+    .chat-messages {
+      flex: 1;
+      padding: 1rem;
+      overflow-y: auto;
+      font-size: 0.9rem;
+    }
+
+    .chat-input {
+      display: flex;
+      border-top: 1px solid #ccc;
+    }
+
+    .chat-input input {
+      flex: 1;
+      border: none;
+      padding: 0.8rem;
+    }
+
+    .chat-input button {
+      background: var(--salmon);
+      border: none;
+      padding: 0.8rem 1rem;
+      color: white;
+      cursor: pointer;
+    }
+
+    footer {
+      background: var(--dark);
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    .socials a {
+      color: white;
+      margin: 0 1rem;
+      font-size: 1.5rem;
+      transition: color 0.3s;
+    }
+
+    .socials a:hover {
+      color: var(--salmon);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Zahra's Blog</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#slider">Posts</a>
+      <a href="#footer">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Welcome to My Colorful World 🌸</h1>
+    <p>Sharing thoughts, tutorials & more...</p>
+  </section>
+
+  <section class="slider" id="slider">
+    <div class="slide">
+      <img src="data:image/jpeg;base64,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" alt="">
+      <div class="slide-content">
+        <h3>Mastering JavaScript</h3>
+        <p>All you need to get started and advance in JS.</p>
+      </div>
+    </div>
+    <div class="slide">
+      <img src="data:image/jpeg;base64,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" alt="">
+      <div class="slide-content">
+        <h3>My Dev Journey</h3>
+        <p>How I got into coding and what I’ve learned.</p>
+      </div>
+    </div>
+    <div class="slide">
+      <img src="data:image/jpeg;base64,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" alt="">
+      <div class="slide-content">
+        <h3>Writing Your First Blog</h3>
+        <p>How to start sharing your ideas online.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="chatbox">
+    <div class="chat-header">Chat with me 💬</div>
+    <div class="chat-messages" id="messages"></div>
+    <div class="chat-input">
+      <input type="text" id="chatInput" placeholder="Type a message...">
+      <button onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+
+  <footer id="footer">
+    <p>Connect with me:</p>
+    <div class="socials">
+      <a href="#"><i class="fab fa-github"></i></a>
+      <a href="#"><i class="fas fa-envelope"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+      <a href="#"><i class="fab fa-stack-overflow"></i></a>
+      <a href="#"><i class="fab fa-x-twitter"></i></a>
+    </div>
+    <p>&copy; 2025 Zahra's Blog. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function sendMessage() {
+      const input = document.getElementById('chatInput');
+      const messages = document.getElementById('messages');
+      if (input.value.trim() !== '') {
+        const msg = document.createElement('div');
+        msg.textContent = `You: ${input.value}`;
+        messages.appendChild(msg);
+        input.value = '';
+        messages.scrollTop = messages.scrollHeight;
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Header Section */
+header {
+    background: linear-gradient(135deg, #ff7f50, #ff6347);
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+header h1 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 2.5rem;
+}
+
+header .tagline {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-top: 10px;
+}
+
+header .profile-img-container {
+    margin-top: 30px;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Styles */
+.section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #ff6347;
+    margin-bottom: 30px;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+/* Skills Section */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.skill-card {
+    background-color: #ff7f50;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+}
+
+.skill-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+/* Certifications Section */
+.certifications-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.cert-card {
+    background-color: #ff6347;
+    color: white;
+    padding: 25px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.cert-card:hover {
+    transform: scale(1.05);
+}
+
+/* Footer Section */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+footer p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icon {
+    background-color: #ff7f50;
+    color: white;
+    padding: 15px;
+    font-size: 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+    background-color: #ff6347;
+}
+
+@media (max-width: 768px) {
+    .skills-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+}
